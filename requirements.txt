@@ -1,0 +1,25 @@
+use html css javascript
+3x3 grid generated using javascript
+minimal html needed
+alternat ebetween placing x and o
+should not be able to play in a cell that already has a symbol in it
+after each placement check if the game is over
+if not continue 
+if over the cells should no longer be clickable to plce more moves
+a message should be displayed announcing the results
+stylize your page so that your game is ana adequate size and is centered on the screen
+each x and o should fill the cell it is in
+
+
+remember 
+comment your style sheets and javascript
+put your style intructions and javascript in seperate files then html
+yse appropriate tags
+displaying last modifiedc info on your page etc.
+you should also list your mchine and brower sused in a comment of EACH FILE 
+code by hand 
+
+include one or more screen captures of the page running 
+
+submis using a zip files
+ensure code works on other machines
