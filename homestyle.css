@@ -1,7 +1,9 @@
+/* Align h1 to centre */
 h1{
     text-align: center;
 }
 
+/* Stylize container */
 .container{
     border: 2px solid black;
     padding: 10px;
@@ -10,10 +12,12 @@ h1{
     flex-wrap: nowrap;
     height: 85%;
     width: 50%;
+    background-color: aliceblue;
 
 
 }
 
+/* Align and force row to prevent wrapping*/
 .row{
     padding: 10px;
     height: 0;
@@ -24,9 +28,10 @@ h1{
     justify-content: center;
     
 }
-
+/* Force Column to a square dimension and stylize */
 .col{
-    border: 2px solid red;
+    border: 2px solid;
+    border-color: rgb(16, 161, 206);
     padding: 10px;
     width: 20%;
     height: 0;
@@ -34,23 +39,32 @@ h1{
     text-align: center;
     z-index: 5;
     content: "x";
+    
 }
 
+/* Stylize all divs and prevent wrap */
 div{
     padding: 10px;
     margin: 10px;
     flex-wrap: nowrap;
 }
 
-
+/* Force X to take up whole container */
 .x::after{
     content: "X";
-    font-size: 120px;
+    font-size: 125px;
+    word-wrap: break-word;
 }
 
+/* Force O to take up whole container */
 .o::after{
     content: "O";
-    font-size: 120px;
+    font-size: 125px;
+    word-wrap: break-word;
 
 }
 
+/* Change Background Color */
+body{
+    background-color: rgb(79, 143, 226);
+}

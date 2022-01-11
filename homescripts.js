@@ -11,13 +11,21 @@ for(let i = 0; i < 3; i++){
         row.appendChild(col);
     }
 }
+// create turn counter to keep track of X and O
 var turncounter = 0;
+
+// wait until document is ready
 $(document).ready(function(){
 
+    //On a click, run tick tac toe game
     $(".col").click(function(){
+
+        // if the game is over, alert the user and prevent clicks
         if(checkForWin() == true){
             alert("The game is over! Refresh the page to play again!");
         }
+
+        // if the game is still running, place symbols and check for wins
         else{
             if($(this).hasClass("x") || $(this).hasClass("o")){
                 alert("This box is already taken");
@@ -31,6 +39,7 @@ $(document).ready(function(){
                     $(this).addClass("o");
                     turncounter++;
                 }
+                // Alert user if a win or tie occurs
                 winnerAlert();
             }
         }
@@ -40,16 +49,7 @@ $(document).ready(function(){
 });
 
 function winnerAlert(){
-    /*
-    horizonal wins are col00, col01, col02
-    horizontal wins are col10, col11, col12
-    horizontal wins are col20, col21, col22
-    vertical wins are col00, col10, col20
-    vertical wins are col01, col11, col21
-    vertical wins are col02, col12, col22
-    diagonal wins are col00, col11, col22
-    diagonal wins are col20, col11, col02
-    */
+    //Return an Alert ibased on the win
    // check for horizontal wins of x
     if($(".col00").hasClass("x") && $(".col01").hasClass("x") && $(".col02").hasClass("x")){
         alert("X wins!");
@@ -111,6 +111,7 @@ function winnerAlert(){
 };
 
 function checkForWin(){
+    //Return a Boolean based on the user win
     // check for horizontal wins of x
     if($(".col00").hasClass("x") && $(".col01").hasClass("x") && $(".col02").hasClass("x")){
         return true;
